@@ -22,5 +22,8 @@ Special thanks to Asty'#8926 for discovering this!
 
 **5.** Now you should notice at the bottom left of VSCode a button to switch profiles and disable/enable highlighting.
 
+# Demo
+[Preview of the colors](https://cdn.discordapp.com/attachments/657156121810698241/840673940707737670/unknown.png)
+
 # NOTE
 VSCode **cannot** use BDScript. if you created a command you will need to copy the code into the [web-app](https://botdesignerdiscord.com/app/) in order to test it.
