@@ -11,7 +11,7 @@
             "case": true
         },
         {
-            "color": "#55ff55",
+            "color": "#aaffaa",
             "keywords": [
                 "+addreactions",
                 "+admin",
@@ -38,7 +38,7 @@
             "case": true
         },
         {
-            "color": "#ff5555",
+            "color": "#ffaaaa",
             "keywords": [
                 "-addreactions",
                 "-admin",
