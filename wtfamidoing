@@ -1,0 +1,19 @@
+$nomention
+
+$onlyIf[$checkContains[$message[1];add;remove]==true;Incorrect usage! use `-role add/remove @user/user id/username|@role/role id/role name`]
+
+$onlyPerms[manageroles;You need manage roles permission to use this!]
+
+$suppressErrors[Error! incorrect argument! make sure the role and user are correct!]
+
+$$replaceText[$replaceText[$message[1];add;give;1];remove;take;1]Role[$replaceText[$replaceText[$replaceText[$checkCondition[$mentioned[1]==]-$checkCondition[$userExists[$splitText[1]]==true];true-false;$userID[$splitText[1]];1];true-true;$splitText[1];1];false-false;$mentioned[1];1];$replaceText[$replaceText[$replaceText[$checkCondition[$isNumber[$splitText[2]]==true]-$checkCondition[$mentionedRoles[1]==];false-false;$mentionedRoles[1];1];true-true;$splitText[2];1];false-true;$roleID[$splitText[2]];1]]
+
+$title[Done]
+$description[$replaceText[$replaceText[$message[1];add;Added;1];Removed;take;1] <@&$replaceText[$replaceText[$replaceText[$checkCondition[$isNumber[$splitText[2]]==true]-$checkCondition[$mentionedRoles[1]==];false-false;$mentionedRoles[1];1];true-true;$splitText[2];1];false-true;$roleID[$splitText[2]];1]> $replaceText[$replaceText[$message[1];add;to;1];remove;from;1] <@$replaceText[$replaceText[$replaceText[$checkCondition[$mentioned[1]==]-$checkCondition[$userExists[$splitText[1]]==true];true-false;$userID[$splitText[1]];1];true-true;$splitText[1];1];false-false;$mentioned[1];1]>]
+$color[ffff]
+
+$textSplit[$message[2] $message[3] $message[4] $message[5] $message[6] $message[7] $message[8];|]
+
+-- from here it's just to show off the colors --
+$modifyChannelPerms[$channelID;-managechannels;+readmessages;$guildID]
+$onlyPerms[managemessages]
